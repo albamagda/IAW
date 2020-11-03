@@ -1,11 +1,11 @@
 <?php
 
-function OpenHTMLtag(){
-    echo "<html>";
+function OpenHTMLtag($tag){
+    echo "<".$tag.">";
 }
 
-function CloseHTMLtag(){
-    echo "</html>";
+function CloseHTMLtag($tag){
+    echo "</".&tag.">";
 }
 
 OpenHTMLtag("html");
