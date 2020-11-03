@@ -1,10 +1,10 @@
 <?php
 
 function OpenHTMLtag(){
-    echo "<html>
+    echo "<html>";
 }
 function CloseHTMLtag(){
-    echo "<html>
+    echo "</html>";
 }
 
 OpenHTMLtag();
