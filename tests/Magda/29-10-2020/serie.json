@@ -1,40 +1,40 @@
 
 
 {
-    "titulo": "The Witcher",
-    "Pais": "Estados Unidos ",
-    "genero": "Fantasía, Aventuras, Drama, Acción",
-    "sinopsis": "El brujo Geralt de Rivia, un cazador de monstruos, trata de encontrar su lugar en un mundo en el que las personas suelen ser más malvadas que las bestias.",
-    "temporadas": [
-        {
-        "@numero": "1",
-        "capitulos": [
-            {
-            "numero": "8",
-            "nombres": [
-                {
-                    "Principio del fin",
-                    "Cuatro marcos",
-                    "Luna traicionera",
-                    "Banquetes, bastardos y entierros"
-                    "Apetitos incontenibles"
-                    "Especies raras"
-                    "Antes de la caída"
-                    "Mucho más"
-
+    "serie": {
+        "titulo": "The Witcher",
+        "Pais": "Estados Unidos ",
+        "genero": "Fantasía, Aventuras, Drama, Acción",
+        "sinopsis": "El brujo Geralt de Rivia, un cazador de monstruos, trata de encontrar su lugar en un mundo en el que las personas suelen ser más malvadas que las bestias.",
+        "temporadas": {
+            "temporada":{
+                "@numero": "1",
+                "capitulos":{
+                    "numero": "8",
+                    "nombres": {
+                        "nombre":[
+                            "Principio del fin",
+                            "Cuatro marcos",
+                            "Luna traicionera",
+                            "Banquetes, bastardos y entierros",
+                            "Apetitos incontenibles",
+                            "Especies raras",
+                            "Antes de la caída",
+                            "Mucho más"
+                        ]
+                    }
                 }
-            ],
+            
             }
-        ],
+        },
+        "protagonistas":{
+            "actor": [
+                "Henry Cavil - Geral de Rivia",
+                "Freya Allan - Cirilla",
+                "Anya Chalotra - Yennefer de Vengerberg",
+                "Joey Batey - Jaskier",
+                "MyAnna Buring - Tissaia de Vries"
+            ]
         }
-    ]
-    "protagonistas"; [
-        {
-            "Henry Cavil - Geral de Rivia"
-            "Freya Allan - Cirilla"
-            "Anya Chalotra - Yennefer de Vengerberg"
-            "Joey Batey - Jaskier"
-            "MyAnna Buring - Tissaia de Vries"
-        }
-    ],
+    }
 }
