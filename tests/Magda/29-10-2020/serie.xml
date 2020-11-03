@@ -1,1 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<serie>
+    <titulo> The Witcher </titulo>
+    <pais></pais>
+    <genero></genero>
+    <sinopsis>Gderalt de Rivia es un cazador de Monstruos</sinopsis>
+    <temporadas>
+        <temporada>1ª Temporada</temporada>
+    </temporadas>
+</serie>
