@@ -5,7 +5,7 @@ function OpenHTMLtag($tag){
 }
 
 function CloseHTMLtag($tag){
-    echo "</".&tag.">";
+    echo "</".$tag.">";
 }
 
 OpenHTMLtag("html");
