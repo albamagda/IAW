@@ -5,24 +5,27 @@
     <genero> Fantasía, Aventuras, Drama, Acción </genero>
     <sinopsis>El brujo Geralt de Rivia, un cazador de monstruos, trata de encontrar su lugar en un mundo en el que las personas suelen ser más malvadas que las bestias.</sinopsis>
     <temporadas>
-        <temporada>1ª Temporada</temporada>
-        <capitulos>
-            <numero> 8 </numero>
-            <nombre> Principio del fin </nombre>
-            <nombre> Cuatro marcos </nombre>
-            <nombre> Luna traicionera </nombre>
-            <nombre> Banquetes, bastardos y entierros </nombre>
-            <nombre> Apetitos incontenibles </nombre>
-            <nombre> Especies raras </nombre>
-            <nombre> Antes de la caída </nombre>
-            <nombre> Mucho más </nombre>
-        </capitulos>
+        <temporada numero="1">
+            <capitulos>
+                <numero> 8 </numero>
+                <nombres>
+                    <nombre> Principio del fin </nombre>
+                    <nombre> Cuatro marcos </nombre>
+                    <nombre> Luna traicionera </nombre>
+                    <nombre> Banquetes, bastardos y entierros </nombre>
+                    <nombre> Apetitos incontenibles </nombre>
+                    <nombre> Especies raras </nombre>
+                    <nombre> Antes de la caída </nombre>
+                    <nombre> Mucho más </nombre>
+                </nombres>
+            </capitulos>
+        </temporada>
     </temporadas>
     <protagonistas>
         <actor> Henry Cavil - Geralt de Rivia </actor>
-        <actriz> Freya Allan - Cirilla </actriz>
-        <actriz> Anya Chalotra - Yennefer de Vengerberg </actriz>
+        <actor> Freya Allan - Cirilla </actor>
+        <actor> Anya Chalotra - Yennefer de Vengerberg </actor>
         <actor> Joey Batey - Jaskier </actor>
-        <actriz>MyAnna Buring - Tissaia de Vries </actriz>
+        <actor> MyAnna Buring - Tissaia de Vries </actor>
     </protagonistas>
 </serie>
