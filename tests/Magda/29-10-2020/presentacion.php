@@ -70,5 +70,6 @@
         <input type="submit" value="Enviar formulario">
         <input type="Reset" value="Borrar datos">
     </form>
+
     </body>
 </html>
