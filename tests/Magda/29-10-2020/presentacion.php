@@ -15,18 +15,16 @@
             border: 1px solid #e5e5e5;         
         }
         h1{
-            color: #6c2eb9;
+            color: #83c860;
             font-weight: normal;
             font-size: 40px;
-            font-family: Arial;
-            text-transform: uppercase;  
+            font-family: Arial; 
         }
         h2 {
-            color: #3c1b66;
+            color: #83c860;
             font-weight: normal;
             font-size: 30px;
             font-family: Arial;
-            text-transform: uppercase;
             }
         img {
             border: 1px solid #ddd;
@@ -42,25 +40,24 @@
 
     <body>
     <?php
-    $Nombre = "Alba";
-    $Apellidos = "Magdaleno Recio";
-    $Edad = 21;
-    $Foto = "<img src=D:\asir2\indice.jpg";
-    $Curso1 = "Bachillerato de Ciencias";
-    $Curso2 = "Administracion de sistemas informaticos y redes";  
-    
-    echo "<h1> Datos del Alumno </h1> <br>";
+        $Nombre = "Alba";
+        $Apellidos = "Magdaleno Recio";
+        $Edad = 21;
+        $Foto = "<img src=D:\asir2\indice.jpg";
+        $Curso1 = "Bachillerato de Ciencias";
+        $Curso2 = "Administracion de Sistemas Informaticos en Red";  
+        
+        echo "<h1> Datos del Alumno </h1> <br>";
 
-    echo "<b>Nombre:</b> $Nombre <br>";
-    echo "<b>Apellidos:</b> $Apellidos <br>";
-    echo "<b>Edad:</b> $Edad <br>";
-    echo "$Foto <br>";
+        echo "<b>Nombre:</b> $Nombre <br>";
+        echo "<b>Apellidos:</b> $Apellidos <br>";
+        echo "<b>Edad:</b> $Edad <br>";
+        echo "$Foto <br>";
 
-    echo "<h2>Estudios</h2><br>";
-    echo  "- $Curso1 <br>";
-    echo  "- $Curso2 <br>";
+        echo "<h2>Estudios</h2><br>";
+        echo  "- $Curso1 <br>";
+        echo  "- $Curso2 <br>";
     ?>
-
 
     <h2>Contacto</h2>
 
@@ -72,9 +69,6 @@
         <br>
         <input type="submit" value="Enviar formulario">
         <input type="Reset" value="Borrar datos">
-
     </form>
-
-
     </body>
 </html>
