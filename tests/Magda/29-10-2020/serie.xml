@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <serie>
     <titulo> The Witcher </titulo>
-    <pais></pais>
-    <genero></genero>
-    <sinopsis>Gderalt de Rivia es un cazador de Monstruos</sinopsis>
+    <pais>Estadounidense</pais>
+    <genero> Fantasía, Aventuras, Drama, Acción </genero>
+    <sinopsis>El brujo Geralt de Rivia, un cazador de monstruos, trata de encontrar su lugar en un mundo en el que las personas suelen ser más malvadas que las bestias.</sinopsis>
     <temporadas>
         <temporada>1ª Temporada</temporada>
+        <capitulos>
+            <numero> 8 </numero>
+            <nombre> Principio del fin </nombre>
+            <nombre> Cuatro marcos </nombre>
+            <nombre> Luna traicionera </nombre>
+            <nombre> Banquetes, bastardos y entierros </nombre>
+            <nombre> Apetitos incontenibles </nombre>
+            <nombre> Especies raras </nombre>
+            <nombre> Antes de la caída </nombre>
+            <nombre> Mucho más </nombre>
+        </capitulos>
     </temporadas>
+    <protagonistas>
+        <actor> Henry Cavil - Geralt de Rivia </actor>
+        <actriz> Freya Allan - Cirilla </actriz>
+        <actriz> Anya Chalotra - Yennefer de Vengerberg </actriz>
+        <actor> Joey Batey - Jaskier </actor>
+        <actriz>MyAnna Buring - Tissaia de Vries </actriz>
+    </protagonistas>
 </serie>
