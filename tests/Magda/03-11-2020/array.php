@@ -21,4 +21,6 @@
         return $array[rand (0, count ($array) - 1)];
     }
 
-    echo "El profesor" RandArray($teacher) "impartirá la asignatura" RandArray($subjets);
+    echo "El profesor".RandArray($teacher)."impartirá la asignatura".RandArray($subjets);
+
+?>
