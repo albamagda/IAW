@@ -10,3 +10,5 @@ function CloseHTMLtag($tag){
 
 OpenHTMLtag("html");
 CloseHTMLtag("html");
+
+?>
