@@ -11,9 +11,11 @@ function OpenTag($tag){
 function CloseTag($tag){
     echo "</" $tag ">";
 }
+
 function CloseHTMLtag(){
     echo "</html>";
 } 
+
 function Text($text){
     echo "$text";
 }
