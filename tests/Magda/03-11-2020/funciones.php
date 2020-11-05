@@ -5,11 +5,11 @@ function OpenHTMLtag(){
 }
 
 function OpenTag($tag){
-    echo "<" $tag ">";
+    echo "<".$tag.">";
 }
 
 function CloseTag($tag){
-    echo "</" $tag ">";
+    echo "</".$tag.">";
 }
 
 function CloseHTMLtag(){
@@ -21,13 +21,14 @@ function Text($text){
 }
 
 OpenHTMLtag("html");
-OpenTag("head");
-OpenTag("title");
+
+//OpenTag("head");
+//OpenTag("title");
 Text("Este es el título")
 CloseTag("title");
 CloseTag("head");
-OpenTag("body");
-OpenTag();
+//OpenTag("body");
+//OpenTag();
 CloseTag();
 OpenTag();
 CloseTag();
