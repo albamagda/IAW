@@ -1,14 +1,35 @@
 <?php
 
-function OpenHTMLtag($tag){
-    echo "<".$tag.">";
+function OpenHTMLtag(){
+    echo "<html>";
 }
 
-function CloseHTMLtag($tag){
-    echo "</".$tag.">";
+function OpenTag($tag){
+    echo "<" $tag ">";
+}
+
+function CloseTag($tag){
+    echo "</" $tag ">";
+}
+function CloseHTMLtag(){
+    echo "</html>";
+} 
+function Text($text){
+    echo "$text";
 }
 
 OpenHTMLtag("html");
-CloseHTMLtag("html");
+OpenTag("head");
+OpenTag("title");
+Text("Este es el título")
+CloseTag("title");
+CloseTag("head");
+OpenTag("body");
+OpenTag();
+CloseTag();
+OpenTag();
+CloseTag();
+CloseTag("body");
+CloseHTMLtag("/html");
 
 ?>
