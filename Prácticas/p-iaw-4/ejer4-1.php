@@ -4,8 +4,8 @@
     </head>
     <body>
        <?php 
-            $a="";
-            $b="";
+            $a="4";
+            $b="9";
             function getGratherValue($a,$b){
                 if($a > $b){
                     echo $a." es mayor que ".$b;
@@ -13,6 +13,7 @@
                     echo $b." es mayor que ".$a;
                 }
             }
+            getGratherValue($a,$b);
        ?> 
     </body>
 </html>
