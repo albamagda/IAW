@@ -4,6 +4,15 @@
     </head>
     <body>
         <?php
+
+        //CONTROL DE ERRORES
+
+        $errores = [];
+        if($_POST['nombre'] == ""){
+            $errores['nombre'] = "El nombre de la fiesta es obligatorio";
+        }
+        //RESULTADO 
+
         if($_POST["enviar"]){
             echo "Formulario: ".$_POST['formulario']. " <br>";
             echo "El nombre de la fiesta es: ".$_POST['nombre']. " <br>";
@@ -29,6 +38,14 @@
         ?>
             <h1>Fiesta</h1>
             <form action="ejercicio1.php" method="POST" enctype="multipart/form-data">
+                <?php
+                    if(isset($_POST['nombre'])){
+                        echo "El nombre de la fiesta es: ".$_POST['nombre']. " <br>";
+                    }
+                    if(isset($errores['nombre'])){
+                        echo "<p><b>".$errores['comentario']."</b></p>";
+                    }
+                ?>
                 Nombre de la fiesta: <input type='text' name='nombre'><br>
 
                 Numero de personas: <input type='number' name='personas'><br>
@@ -55,7 +72,7 @@
                 Comentarios: <br>
                 <textarea name='comentarios' cols='50' rows='5'> </textarea><br>
 
-                <input type='submit' value='Enviar'>
+                <input type='submit' name="enviar" value='Enviar'>
             </form>
         <?php
         }
