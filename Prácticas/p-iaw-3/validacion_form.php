@@ -9,15 +9,16 @@
         if(isset($_POST["enviar"])){
 
             //COMPROBAR
-            if($_POST['nombre'] == ""){
+
+            if(isset($_POST['nombre'])&& $_POST['nombre'] == ""){
                 $errores['nombre'] = "El nombre de la fiesta es obligatorio";
             }//NOMBRE EN BLANCO
-            if($_POST['tipo'] == ""){
+            if(isset($_POST['nombre'])&& $_POST['tipo'] == ""){
                 $errores['tipo'] = "Elegir un tipo de música es obligatorio";
             }//TIPO DE MUSICA EN BLANCO
         }
 
-        if($_POST["enviar"] && count($errores) == 0){
+        if(isset($_POST["enviar"]) && count($errores) == 0){
             echo "Formulario: ".$_POST['formulario']. " <br>";
             echo "El nombre de la fiesta es: ".$_POST['nombre']. " <br>";
             echo "El numero de personas que acudiran: ".$_POST['personas']. " </br>";
@@ -38,10 +39,11 @@
             }
 
             echo "Comentarios: ".$_POST['comentarios']. " </br>";
-        }else{
+        }//Fin Formulario
+        else{
         ?>
             <h1>Fiesta</h1>
-            <form action="ejercicio1.php" method="POST" enctype="multipart/form-data">
+            <form action="validacion_form.php" method="POST" enctype="multipart/form-data">
                 <?php
                     if(isset($errores['nombre'])){
                         echo "<p><b>".$errores['nombre']."</b></p>";
@@ -80,7 +82,8 @@
                 <input type='submit' name="enviar" value='Enviar'>
             </form>
         <?php
-        }
+        }//Fin salida x pantalla
         ?>
     </body>
 </html>
+
