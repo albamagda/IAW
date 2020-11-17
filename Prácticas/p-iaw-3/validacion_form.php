@@ -11,11 +11,14 @@
             //COMPROBAR
 
             if(isset($_POST['nombre'])&& $_POST['nombre'] == ""){
-                $errores['nombre'] = "El nombre de la fiesta es obligatorio";
+                $errores['nombre'] = "El nombre de la fiesta es obligatorio.";
             }//NOMBRE EN BLANCO
             if(isset($_POST['nombre'])&& $_POST['tipo'] == ""){
-                $errores['tipo'] = "Elegir un tipo de música es obligatorio";
+                $errores['tipo'] = "Elegir un tipo de música es obligatorio.";
             }//TIPO DE MUSICA EN BLANCO
+            if(isset($_POST['nombre'])&& count($_POST['espacio']) < 2){
+                $errores['tipo'] = "Hay que elegir dos o más espacios.";
+            }//ESPACIOS EN BLANCO O SOLO 1
         }
 
         if(isset($_POST["enviar"]) && count($errores) == 0){
@@ -39,7 +42,7 @@
             }
 
             echo "Comentarios: ".$_POST['comentarios']. " </br>";
-        }//Fin Formulario
+        }//Fin Salida x pantalla
         else{
         ?>
             <h1>Fiesta</h1>
@@ -82,7 +85,7 @@
                 <input type='submit' name="enviar" value='Enviar'>
             </form>
         <?php
-        }//Fin salida x pantalla
+        }//Fin formulario
         ?>
     </body>
 </html>
