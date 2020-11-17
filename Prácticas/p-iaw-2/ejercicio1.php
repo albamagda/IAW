@@ -4,16 +4,20 @@
     </head>
     <body>
         <?php
-
-        //CONTROL DE ERRORES
-
         $errores = [];
-        if($_POST['nombre'] == ""){
-            $errores['nombre'] = "El nombre de la fiesta es obligatorio";
-        }
-        //RESULTADO 
 
-        if($_POST["enviar"]){
+        if(isset($_POST["enviar"])){
+
+            //COMPROBAR
+            if($_POST['nombre'] == ""){
+                $errores['nombre'] = "El nombre de la fiesta es obligatorio";
+            }//NOMBRE EN BLANCO
+            if($_POST['tipo'] == ""){
+                $errores['tipo'] = "Elegir un tipo de música es obligatorio";
+            }//TIPO DE MUSICA EN BLANCO
+        }
+
+        if($_POST["enviar"] && count($errores) == 0){
             echo "Formulario: ".$_POST['formulario']. " <br>";
             echo "El nombre de la fiesta es: ".$_POST['nombre']. " <br>";
             echo "El numero de personas que acudiran: ".$_POST['personas']. " </br>";
@@ -32,18 +36,18 @@
             }else{
                 echo "No ha seleccionado ningun espacio </br>";
             }
-            
+
             echo "Comentarios: ".$_POST['comentarios']. " </br>";
         }else{
         ?>
             <h1>Fiesta</h1>
             <form action="ejercicio1.php" method="POST" enctype="multipart/form-data">
                 <?php
-                    if(isset($_POST['nombre'])){
-                        echo "El nombre de la fiesta es: ".$_POST['nombre']. " <br>";
-                    }
                     if(isset($errores['nombre'])){
-                        echo "<p><b>".$errores['comentario']."</b></p>";
+                        echo "<p><b>".$errores['nombre']."</b></p>";
+                    }
+                    if(isset($errores['tipo'])){
+                        echo "<p><b>".$errores['tipo']."</b></p>";
                     }
                 ?>
                 Nombre de la fiesta: <input type='text' name='nombre'><br>
@@ -54,14 +58,15 @@
                 <input type='radio'  name='publica' value='privada'> Privada<br>
 
                 Tipo de Musica
-                <select name='tipo'>";
+                <select name='tipo'>
+                    <option value=''>Seleccionar tipo de música</option>
                     <option value='pop'>Pop</option>
                     <option value='rock'>Rock</option>
                     <option value='jazz'>Jazz</option>
-                    <option value='indie'>Indie</option>    
+                    <option value='indie'>Indie</option>
                 </select><br>
 
-                Espacios: 
+                Espacios:
                     <input type='checkbox' name='espacio[]' value='barras' > Barras
                     <input type='checkbox'  name='espacio[]' value='escenarios' checked> Escenarios
                     <input type='checkbox'  name='espacio[]' value='jardin'> Jardín
