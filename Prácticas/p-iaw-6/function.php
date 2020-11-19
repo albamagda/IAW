@@ -14,23 +14,29 @@
 
                 // Create connection
                 $conn = mysqli_connect($servername, $username, $password, $database);
-                $query = "SELECT * FROM city LIMIT 10";
+                
                 // Check connection
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
-                if ($resultado = $conn->query($query)) {
-                    while( $row = $resultado->fetch_array() )
-                    {
-                        echo "<li>La ciudad ". $row['Name'] ." con el código ".$row['CountryCode']. " pertenece al distrito " . $row['District']. "</li>";
-                        echo "<br />";
-                    }
-                    $resultado->close();
+
+                //Funcion de la query 
+                function results($limit, $conn){
+                    $query="SELECT * FROM city LIMIT ". $limit;
+                    $resultado = $conn->query($query);
+                    return $resultado
                 }
+
+                //QueryResults(10,$conn)
+                while( $row = results(10,$conn)->fetch_array() )
+                {
+                    echo "<li>". $row['Name'] . " pertenece al distrito " . $row['District']. "</li>";
+                    echo "<br />";
+                }
+                 $resultado->close();
                 echo "Connected successfully";
                 mysqli_close($conn);
             ?>
         </ol>
     </body>
 </html>
-
