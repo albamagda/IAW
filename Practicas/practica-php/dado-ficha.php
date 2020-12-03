@@ -28,9 +28,15 @@
 
   <p>Actualice la página para mostrar una nueva tirada.</p>
 
+  <form action="dado-ficha.php" method="POST" enctype="multipart/form-data">
+    <input type='number' name='numero' max='6' min='1'><br><br>
+    <input type='submit' name="enviar" value='Enviar'>
+</form>
+
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
+$imgsrc= "img/".$_POST['numero'].".svg";
+  echo "<img src=".$imgsrc.">";
 
 ?>
 

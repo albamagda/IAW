@@ -24,12 +24,21 @@
 <body>
   <h1>Tres cuadrados</h1>
 
-  <p>Actualice la página para mostrar tres nuevos cuadrados.</p>
+  <p>Actualice la página para mostrar tres nuevos cuadrados.</p> 
 
-<?php
+  
+  
+  <?php
+ $color=["red", "blue", "yellow", "green", "black", "pink", "purple", "brown", "powderblue"];
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
-
+  for ($i= 0; $i<3 ; $i++){
+    $side = rand(50,150);
+    $num = rand(0,8);
+    
+    echo "<div style='width:".$side."px;height:".$side."px;background-color:".$color[$num].";display:inline-block;'></div>";
+   
+  }
+  
 ?>
 
   <footer>
