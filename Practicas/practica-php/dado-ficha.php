@@ -19,6 +19,15 @@
     Variables. Sin formularios.
     Escriba aquí su nombre
   </title>
+  <style>
+  table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 75px;
+    width: 500px;
+    text-align: center;
+  }
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" title="Color">
 </head>
@@ -28,17 +37,22 @@
 
   <p>Actualice la página para mostrar una nueva tirada.</p>
 
-  <form action="dado-ficha.php" method="POST" enctype="multipart/form-data">
-    <input type='number' name='numero' max='6' min='1'><br><br>
-    <input type='submit' name="enviar" value='Enviar'>
-</form>
+    <?php
+    $num=rand(1,6);
+    $imgsrc= "img/".$num.".svg";
 
-<?php
-
-$imgsrc= "img/".$_POST['numero'].".svg";
-  echo "<img src=".$imgsrc.">";
-
-?>
+      echo "<img src=".$imgsrc.">";
+    ?>
+  <table> 
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </table>
 
   <footer>
     <p>Escriba aquí su nombre</p>
