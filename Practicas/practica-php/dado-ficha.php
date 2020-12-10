@@ -52,6 +52,27 @@
       <td>5</td>
       <td>6</td>
     </tr>
+    <tr>
+    <?php
+     $color= ["transparent",
+        "transparent",
+        "transparent",
+        "transparent",
+        "transparent",
+        "transparent",
+      ];
+      $color[($num - 1)]="red";
+      for ($i=0; $i<6; $i++ ){
+          echo"<td>
+            <b  style='height:50px;
+            width:50px;
+            background-color:".$color[$i].";
+            display:inline-block;
+            border-radius:25px;'>
+          </td>";
+      }
+    ?>
+    </tr>
   </table>
 
   <footer>
