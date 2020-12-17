@@ -6,7 +6,7 @@
  *
  */
 
-print "<!-- Ejercicio incompleto -->\n";
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -27,11 +27,11 @@ print "<!-- Ejercicio incompleto -->\n";
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
+echo "La frase anterior fue ".$_SESSION['frase'];
 
 ?>
 
-  <form action="sesiones-1-01-2.php" method="get">
+  <form action="sesiones-1-01-2.php" method="post">
     <p><label>Escriba texto: <input type="text" name="texto" size="20" maxlength="20"></label></p>
 
     <p>

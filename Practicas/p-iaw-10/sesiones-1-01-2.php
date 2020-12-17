@@ -6,7 +6,7 @@
  *
  */
 
-print "<!-- Ejercicio incompleto -->\n";
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,17 @@ print "<!-- Ejercicio incompleto -->\n";
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
+echo "La frase anterior fue ".$_SESSION['frase'];
+
+if($_POST['texto'] == ""){
+  echo "<p>No me has pasado ninguna frase</p>";
+}else{
+  echo "<p>La frase es ".$_POST['texto']."</p>";
+  
+  $_SESSION['frase'] = $_POST['texto'];
+}
+
+
 
 ?>
 
