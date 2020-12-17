@@ -21,23 +21,36 @@ session_start();
 
   <?php
     
-    $username = "florindo";
+    $username = "alba";
     $password = "123456";
     $errores = [];
 
     if(isset($_POST['enviar'])){
         if(isset($_POST['username']) && $_POST['username'] != $username){
-            $errores[] = "Usuario no encontrado";
+            $errores[] = "Usuario erróneo o no encontrado";
         }
         if(isset($_POST['password']) && $_POST['password'] != $password){
-            $errores[] = "Pasword no encontrada";
+            $errores[] = "Password errónea";
         }
     }
+   
 
     if(count($errores) == 0){
+        //LOGIN CORRECTO
+        $_SESSION['sesion'] = $username;
+        $_SESSION['type'] = $_POST['type'];
 
-        $_SESSION['sesion'] = $usuario;
-        echo "<b>Sesion iniciada</b>";
+        echo "Hola ".$username."<br><br>";
+        echo "<b>Sesion iniciada</b><br><br>";
+        echo "<a href='login.php'>Retrocede</a>";
+    }else{
+        //FALLOS EN EL LOGIN
+        echo "<ul>";
+        foreach($errores as $error){
+            echo "<li>".$error."</li>";
+        }
+        echo "</ul>";
+        echo "<a href='login.php'> Vuelve a loggearte.</a>";
     }
 
     ?>

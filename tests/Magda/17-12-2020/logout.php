@@ -18,6 +18,7 @@ session_destroy();
 
 <body>
   <h1>Login out</h1>
-
+  
+  <a href="login.php">Vuelve a loggearte</a>
 </body>
 </html>

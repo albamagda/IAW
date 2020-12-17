@@ -22,10 +22,22 @@ session_start();
   <?php
 
     if(isset($_SESSION['sesion'])){
+        if(isset($_SESSION['type'])){
+            echo "Has iniciado como ".$_SESSION['type']." <br><br>";
+        }
         echo "<a href ='logout.php'>Logout</a>";
     }else{
     ?>
         <form action="procesarlogin.php" method="post">
+            <p>
+                <label>
+                    Tipo de usuario
+                </label>
+                <select id="type" name="type">
+                    <option value="profesor">Profesor</option>
+                    <option value="alumno">Alumno</option>
+                </select>
+            </p>
             <p>
                 <label>
                     Username
