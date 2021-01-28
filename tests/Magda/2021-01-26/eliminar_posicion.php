@@ -12,17 +12,15 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "DELETE FROM equipo WHERE id=".$_GET['id']."";
+$sql = "DELETE FROM posicion WHERE id=".$_GET['id']."";
 $resultado = $conn->query($sql);
 
-if ($resultado) {
-  $_SESSION['eliminar_equipo'] = true;
-}else{
-  $_SESSION['eliminar_equipo'] = false;
+if (!$resultado) {
+  echo "No se ha borrado correctamente";
 }
 echo "Connected successfully";
 mysqli_close($conn);
 
-header("Location:listar_equipos.php");
+header("Location:listar_posiciones.php");
 
 ?>

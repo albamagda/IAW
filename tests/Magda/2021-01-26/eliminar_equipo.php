@@ -15,10 +15,8 @@ if (!$conn) {
 $sql = "DELETE FROM equipo WHERE id=".$_GET['id']."";
 $resultado = $conn->query($sql);
 
-if ($resultado) {
-  $_SESSION['eliminar_equipo'] = true;
-}else{
-  $_SESSION['eliminar_equipo'] = false;
+if (!$resultado) {
+  echo "No se ha borrado correctamente";
 }
 echo "Connected successfully";
 mysqli_close($conn);
