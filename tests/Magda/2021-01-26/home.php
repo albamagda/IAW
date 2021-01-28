@@ -47,6 +47,10 @@
         }
       ?>
     </li>
+    <li><a href="insertar_datos_equipo_form.php">Insertar un equipo nuevo</a>
+    </li>
+    <li><a href="listar_equipos.php">Listado de los equipos</a>
+    </li>
     <li><a href="crear_jugador.php">Crear tabla jugador</a>
       <?php
         if(isset($_SESSION['crear_tabla_jugador'])){
@@ -68,6 +72,10 @@
           }
         }
       ?>
+    </li>
+    <li><a href="insertar_datos_jugador_form.php">Insertar un jugador nuevo</a>
+    </li>
+    <li><a href="listar_jugadores.php">Listado de los jugadores</a>
     </li>
     <li><a href="crear_partido.php">Crear tabla partido</a>
       <?php
@@ -112,6 +120,8 @@
           }
         }
       ?>
+    </li>
+    <li><a href="listar_posiciones.php">Listado de las posiciones</a>
     </li>
     <li><a href="crear_jugador-posicion.php">Crear tabla jugador-posicion</a>
       <?php
